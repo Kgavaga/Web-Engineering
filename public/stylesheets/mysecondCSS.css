@@ -1,0 +1,58 @@
+* {margin:0;padding:0}
+header,footer {color: white;  background-color: black; padding:1em; width:100%}
+/* #headerfix {position:fixed; top:0; left:0; width:100%} */
+footer {position:fixed; bottom:0; left:0;}
+/*header span.headertext {position: relative; top: -20px; padding-left: 40px; font-size: 2em;} */
+nav  {background-color:darkgrey;}
+nav li:nth-child(2n) {background-color: #848d9e;}
+nav li:nth-child(2n+1) {background-color: #e2e4e8;}
+nav::after{clear:both; content:""; display:block;}
+nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: right;
+        border-left-style: solid; border-left-color: white; border-left-width: 1px; }
+
+/* -----------------------------------------------------------------------------
+   The following CSS 3 Grid statements layouts the viewport (visible page).
+  The Grid consists of the Header, the Navigation ,
+  the scrollable Part (youTube, Fakultäten) and the footer
+  In this case the Grid has four rows (height = auto) and 1 column with a
+  width of 100 %
+  The Header, the youTube and the Fakultäten become a flexbox
+  The whole Grid is positioned fixed and row 3 should be made scrollable
+  ----------------------------------------------------------------------------  */
+  .pagegridcontainer {display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "scroller"
+    "footer"
+    }
+    .pagegridheader {grid-area: header}
+    .pagegridnavigation {grid-area: navigation}
+    .pagegridsrcol  {
+      grid-area: scroller;
+      display: flex;
+      flex-flow: column;
+    }
+    .pagegridsfooter  {grid-area: footer}
+/* -----------------------------------------------------------------------------
+   The following statements are examples of flex-box classes, of course you can
+   build your own
+-------------------------------------------------------------------------------- */
+.flexboxheader,.flexboxnav,.flexFakultaet {display:flex; flex-flow: row wrap;}
+.flexboxheader {justify-content: space-between; align-items: center;}
+.flexboxnav {justify-content: center; flex-direction: row;}
+.flexyouTube {flex-flow:column; max-width: 700px;}
+
+/* consider the changes needed based on different screen sizes caught by the
+    @media only screen and (min-width:.....
+                                                                                 */
+
+nav li:hover {background-color:white;}
+nav li a { text-decoration: none; padding: inherit; color: yellow;   font-weight: bold;}
+a:visited { color: blue; }
+a:hover, a:active, a:focus { color: darkred;  text-decoration: none;}                                                                
+
