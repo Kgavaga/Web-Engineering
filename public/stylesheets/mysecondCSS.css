@@ -19,7 +19,9 @@ nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: rig
   The Header, the youTube and the Fakultäten become a flexbox
   The whole Grid is positioned fixed and row 3 should be made scrollable
   ----------------------------------------------------------------------------  */
-  .pagegridcontainer {display:grid;
+  .pagegridcontainer {
+    height:100%;
+    display:grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     justify-items: stretch;
@@ -36,20 +38,31 @@ nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: rig
       grid-area: scroller;
       display: flex;
       flex-flow: column;
+      overflow: auto;
     }
     .pagegridsfooter  {grid-area: footer}
 /* -----------------------------------------------------------------------------
    The following statements are examples of flex-box classes, of course you can
    build your own
 -------------------------------------------------------------------------------- */
-.flexboxheader,.flexboxnav,.flexFakultaet {display:flex; flex-flow: row wrap;}
-.flexboxheader {justify-content: space-between; align-items: center;}
-.flexboxnav {justify-content: center; flex-direction: row;}
-.flexyouTube {flex-flow:column; max-width: 700px;}
+.flexFakultaet {
+  display:flex; 
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flexboxheader {
+  justify-content: space-between; 
+  align-items: center;
+}
+.flexboxnav {
+  justify-content: center; 
+  flex-direction: row;
+}
+.flexyouTube {
+  flex-flow:column; 
+  max-width: 700px;
+}
 
-/* consider the changes needed based on different screen sizes caught by the
-    @media only screen and (min-width:.....
-                                                                                 */
 
 nav li:hover {background-color:white;}
 nav li a { text-decoration: none; padding: inherit; color: yellow;   font-weight: bold;}
