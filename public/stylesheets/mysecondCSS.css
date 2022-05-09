@@ -21,6 +21,7 @@ nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: rig
   ----------------------------------------------------------------------------  */
     .pagegridcontainer {
       display:grid;
+      width: 100%;
       grid-template-columns: 100%;
       grid-template-rows: auto;
       justify-items: stretch;
@@ -34,7 +35,8 @@ nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: rig
     .pagegridheader {grid-area: header}
     .pagegridnavigation {grid-area: navigation}
     .pagegridsrcol  {
-      overflow:scroll;
+      overflow-x: hidden;
+      overflow-y: hidden;
       grid-area: scroller;
       display: flex;
       flex-flow: column;
@@ -112,6 +114,16 @@ nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: rig
   color: white;
   flex: 100%;
   padding: 20px;
+}
+
+#PullupOptions *, #showwindow *{
+  padding:5px;
+  list-style-type: none; 
+  text-decoration: none; 
+}
+
+#showwindow td, #showwindow th{
+  border: 1px solid #ddd;
 }
 
 /*Misc*/

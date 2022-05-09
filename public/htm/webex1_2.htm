@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/mysecondCSS.css">
     <meta charset="UTF-8">
     <title>DHBW Web Engineering Meine erste Homepage</title>
-    <script src="../js/JavaScript.js"></script>
   </head>
 
   <body class="pagegridcontainer">
@@ -21,11 +20,10 @@
           <li><a href="#Informatik">Informatik</a></li>
           <li><a href="#Elektrotechnik">Elektrotechnik</a></li>
           <li><a href="#Maschinenbau">Maschinenbau</a></li>
-          <li id="PullupServices"><a>Dienste</a></li>
       </div>
     </nav>
 
-    <div class="pagegridsrcol" id="scrollpart" onload="Init">
+    <div class="pagegridsrcol">
       <div id="YouTube" class="flexyouTube">
         <iframe width="420" height="300"
           src="https://youtube.com/embed/2dy9fLZEg9A">
@@ -78,24 +76,6 @@
             des Studiengangs, Aufgaben in vielen Tätigkeitsfeldern zu übernehmen:
         </div>
       </div>
-
-      <div id="PullupOptions" style="position:fixed;left:0;display:none;background-color:white;z-index:10">
-        <button  id="PullupOptionsBtn" type="button">
-          <span style="font-size:1.5em;"> Zurück </span>
-        </button>
-        <ul>
-          <li id="popupli1" style="cursor:pointer;">Leute</li>
-          <label for="fname">Wikipedia Suche:</label>
-          <input type="text" name="searchStringInput">
-          <input type="submit" value="Submit">
-        </ul>
-      </div>
-      <div id="showwindow" style="position:fixed;left:0;display:none;background-color:white;z-index:10">
-        <button type="button" id="showwindowbtn">
-          <span style="font-size:1.5em; text-align: center;"> Zurück </span>
-        </button>
-        <div id="showwindowData"></div>
-      </div>
     </div>
 
     <footer class="pagegridsfooter">
@@ -103,7 +83,5 @@
       <img src="/images/logodhbw.svg" alt="W3Schools.com" width="300">
       <p>Copyright &copy; DHBW Stuttgart</p>
     </footer>
-
-    <script>document.getElementsByTagName("BODY")[0].onload = Init();</script>
   </body>
 </html>
