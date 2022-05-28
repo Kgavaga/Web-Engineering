@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../stylesheets/mysecondCSS.css">
     <meta charset="UTF-8">
-    <title>DHBW Web Engineering Meine erste Homepage</title>
+    <title>My wonderfully mediocre website</title>
     <script src="../js/JavaScript.js"></script>
   </head>
 
@@ -86,8 +86,8 @@
         <ul>
           <li id="popupli1" style="cursor:pointer;">Leute</li>
           <label for="fname">Wikipedia Suche:</label>
-          <input type="text" name="searchStringInput">
-          <input type="submit" value="Submit">
+          <input type="text" id="searchStringInput">
+          <input type="submit" value="Submit" id="wikiQueryButton">
         </ul>
       </div>
       <div id="showwindow" style="position:fixed;left:0;display:none;background-color:white;z-index:10">
@@ -95,6 +95,12 @@
           <span style="font-size:1.5em; text-align: center;"> Zurück </span>
         </button>
         <div id="showwindowData"></div>
+      </div>
+      <div id="showWiki" style="position:fixed;left:10%;max-width: 80%;display:none;background-color:white;z-index:10">
+        <button type="button" id="showWikiBtn">
+          <span style="font-size:1.5em; text-align: center;"> Zurück </span>
+        </button>
+        <div id="showWikiData"></div>
       </div>
     </div>
 

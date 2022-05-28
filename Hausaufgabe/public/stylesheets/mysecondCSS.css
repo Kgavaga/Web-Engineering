@@ -116,13 +116,13 @@ nav li {list-style-type: none; display: inline-block; padding: 1.5em; float: rig
   padding: 20px;
 }
 
-#PullupOptions *, #showwindow *{
+#PullupOptions *, #showwindow *, #showWiki *{
   padding:5px;
   list-style-type: none; 
   text-decoration: none; 
 }
 
-#showwindow td, #showwindow th{
+#showwindow td, #showwindow th, #showWiki th, #showWiki td{
   border: 1px solid #ddd;
 }
 
